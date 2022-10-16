@@ -12,6 +12,7 @@ const { title, description } = Astro.props as Props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Rubik"
