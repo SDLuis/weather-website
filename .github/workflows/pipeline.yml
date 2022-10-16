@@ -64,6 +64,8 @@ jobs:
           node-version: '14'
       - name: Install dependencies
         run: npm ci
+      - name: Install Playwright
+        run: npx playwright install   
       - uses: maxmilton/action-setup-playwright@v1
         with:
           browsers: chromium, firefox, webkit 
