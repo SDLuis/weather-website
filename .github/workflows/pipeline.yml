@@ -48,8 +48,8 @@ jobs:
         run: npm run build
       - uses: actions/upload-artifact@v3
         with:
-          name: build
-          path: build
+          name: dist
+          path: dist
   
   test:
     needs: [lint, build]
@@ -72,8 +72,8 @@ jobs:
           headless: true 
       - uses: actions/download-artifact@v3
         with:
-          name: build
-          path: build
+          name: dist
+          path: dist
       - run: npm run test:e2e
 
   deploy:
@@ -90,7 +90,7 @@ jobs:
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2
         with:
-          publish-dir: './build'
+          publish-dir: './dist'
           production-branch: master
           github-token: ${{ secrets.TOKEN_GITHUB }}
           deploy-message: "Deploy from GitHub Actions"
