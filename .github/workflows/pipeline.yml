@@ -73,7 +73,7 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: dist
-          path: dist
+          path: /
       - run: npm run test:e2e
 
   deploy:
