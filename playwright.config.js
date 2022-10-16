@@ -12,10 +12,6 @@ import { devices } from '@playwright/test'
 const config = {
   testDir: './tests',
   /* Maximum time one test can run for. */
-  webServer: {
-    command: 'npm start',
-    url: 'http://localhost:5000/'
-  },
   timeout: 30 * 1000,
   expect: {
     /**
