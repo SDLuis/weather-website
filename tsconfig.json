@@ -10,9 +10,9 @@
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
     "strict": true,
-    "importsNotUsedAsValues": "error",
     "jsx": "react-jsx",
     "jsxImportSource": "react"
+    
   },
   "extends": "astro/tsconfigs/strict"
 }
