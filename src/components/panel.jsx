@@ -20,7 +20,7 @@ export default function PanelComponent ({ btnColor, weatherEntry, setLocation })
         </button>
       </form>
       <ul className='pb-4 my-8 border-b-[1px] text-sm border-white text-[#ccc] block'>
-        <li className='my-9 cursor-pointer hover:text-white' onClick={(e) => setLocation('New York')}>
+        <li className='newyork my-9 cursor-pointer hover:text-white' onClick={(e) => setLocation('New York')}>
           New York
         </li>
         <li className='my-9 cursor-pointer hover:text-white' onClick={(e) => setLocation('California')}>
