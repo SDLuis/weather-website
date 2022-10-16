@@ -15,15 +15,15 @@ const config = {
   webServer: {
     command: 'npm start',
     url: 'http://localhost:5000/',
-    timeout: 10000
+    timeout: 3000
   },
-  timeout: 100 * 1000,
+  timeout: 30 * 1000,
   expect: {
     /**
      * Maximum time expect() should wait for the condition to be met.
      * For example in `await expect(locator).toHaveText();`
      */
-    timeout: 100000
+    timeout: 5000
   },
   /* Run tests in files in parallel */
   fullyParallel: true,
