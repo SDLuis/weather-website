@@ -48,8 +48,8 @@ jobs:
         run: npm run build
       - uses: actions/upload-artifact@v3
         with:
-          name: dist
-          path: dist
+          name: build
+          path: build
   
   test:
     needs: [lint, build]
@@ -68,12 +68,12 @@ jobs:
         run: npx playwright install   
       - uses: maxmilton/action-setup-playwright@v1
         with:
-          browsers: chromium, firefox, webkit 
+          browsers: chromium
           headless: true 
       - uses: actions/download-artifact@v3
         with:
-          name: dist
-          path: dist
+          name: build
+          path: build
       - run: npm run test:e2e
 
   deploy:
@@ -90,7 +90,7 @@ jobs:
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2
         with:
-          publish-dir: './dist'
+          publish-dir: './build'
           production-branch: master
           github-token: ${{ secrets.TOKEN_GITHUB }}
           deploy-message: "Deploy from GitHub Actions"
