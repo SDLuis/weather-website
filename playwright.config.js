@@ -12,6 +12,11 @@ import { devices } from '@playwright/test'
 const config = {
   testDir: './tests',
   /* Maximum time one test can run for. */
+  webServer: {
+    command: 'npm start',
+    url: 'http://localhost:5000/',
+    timeout: 120000
+  },
   timeout: 30 * 1000,
   expect: {
     /**
@@ -28,7 +33,7 @@ const config = {
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 2 : undefined,
+  workers: process.env.CI ? 3 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
