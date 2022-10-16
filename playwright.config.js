@@ -15,7 +15,7 @@ const config = {
   webServer: {
     command: 'npm start',
     url: 'http://localhost:5000/',
-    timeout: 30000
+    timeout: 10000
   },
   timeout: 30 * 1000,
   expect: {
