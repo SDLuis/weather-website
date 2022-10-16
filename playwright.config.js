@@ -14,8 +14,7 @@ const config = {
   /* Maximum time one test can run for. */
   webServer: {
     command: 'npm start',
-    url: 'http://localhost:5000/',
-    timeout: 3000
+    url: 'http://localhost:5000/'
   },
   timeout: 30 * 1000,
   expect: {
