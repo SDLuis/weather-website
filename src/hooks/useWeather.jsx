@@ -31,7 +31,7 @@ export default function UseWeather ({ location }) {
       'Friday',
       'Saturday'
     ]
-    return weekday[new Date(`${month} ${day},${year}`).getUTCDay()]
+    return weekday[new Date(`${year}-${month}-${day}`).getUTCDay()]
   }
 
   const code = weather.current.condition.code
