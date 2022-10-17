@@ -1,3 +1,4 @@
+import type { PlaywrightTestConfig } from '@playwright/test'
 import { devices } from '@playwright/test'
 
 /**
@@ -9,9 +10,16 @@ import { devices } from '@playwright/test'
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
-const config = {
+const config: PlaywrightTestConfig = {
   testDir: './tests',
   /* Maximum time one test can run for. */
+  webServer: {
+    command: 'npm start',
+    // Point to the url that returns 200 once dev server is ready.
+    url: 'http://localhost:3000/',
+    // Give it 120 seconds. Increase/decrease depending on your dev server speed.
+    timeout: 120000
+  },
   timeout: 30 * 1000,
   expect: {
     /**
@@ -28,7 +36,7 @@ const config = {
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 3 : undefined,
+  workers: process.env.CI ? 2 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
