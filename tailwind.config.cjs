@@ -5,22 +5,22 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'day-cloudy': "url('/src/img/day/cloudy.webp')",
-        'day-rainy': "url('/src/img/day/rainy.webp')",
-        'day-clear': "url('/src/img/day/clear.webp')",
-        'day-snowy': "url('/src/img/day/snowy.webp')",
-        'night-cloudy': "url('/src/img/night/cloudy.webp')",
-        'night-rainy': "url('/src/img/night/rainy.webp')",
-        'night-clear': "url('/src/img/night/clear.webp')",
-        'night-snowy': "url('/src/img/night/snowy.webp')",
-        'day-rainyblur': "url('/src/img/day/rainyblur.webp')",
-        'day-clearblur': "url('/src/img/day/clearblur.webp')",
-        'day-cloudyblur': "url('/src/img/day/cloudyblur.webp')",
-        'day-snowyblur': "url('/src/img/day/snowyblur.webp')",
-        'night-clearblur': "url('/src/img/night/clearblur.webp')",
-        'night-rainyblur': "url('/src/img/night/rainyblur.webp')",
-        'night-cloudyblur': "url('/src/img/night/cloudyblur.webp')",
-        'night-snowyblur': "url('/src/img/night/snowyblur.webp')"
+        'day-cloudy': "url('/img/day/cloudy.webp')",
+        'day-rainy': "url('/img/day/rainy.webp')",
+        'day-clear': "url('/img/day/clear.webp')",
+        'day-snowy': "url('/img/day/snowy.webp')",
+        'night-cloudy': "url('/img/night/cloudy.webp')",
+        'night-rainy': "url('/img/night/rainy.webp')",
+        'night-clear': "url('/img/night/clear.webp')",
+        'night-snowy': "url('/img/night/snowy.webp')",
+        'day-rainyblur': "url('/img/day/rainyblur.webp')",
+        'day-clearblur': "url('/img/day/clearblur.webp')",
+        'day-cloudyblur': "url('/img/day/cloudyblur.webp')",
+        'day-snowyblur': "url('/img/day/snowyblur.webp')",
+        'night-clearblur': "url('/img/night/clearblur.webp')",
+        'night-rainyblur': "url('/img/night/rainyblur.webp')",
+        'night-cloudyblur': "url('/img/night/cloudyblur.webp')",
+        'night-snowyblur': "url('/img/night/snowyblur.webp')"
       },
       fontFamily: {
         rubik: ['Rubik', 'sans-serif']
