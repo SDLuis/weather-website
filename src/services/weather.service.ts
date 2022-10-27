@@ -1,11 +1,19 @@
 import axios from 'axios'
 import type { IweatherData } from '../types'
 
-const key: string = '4d53f4bb7de04526b3e200729221310'
+const key: string = '77a4116fddmsh247406efc0bf65bp181c64jsna63179ead414'
 
 export const getWeathers = async (city: string): Promise<IweatherData> => {
-  return await axios
-    .get(`http://api.weatherapi.com/v1/current.json?key=${key}&q=${city}`)
+  const options = {
+    method: 'GET',
+    url: 'https://weatherapi-com.p.rapidapi.com/current.json',
+    params: { q: city },
+    headers: {
+      'X-RapidAPI-Key': key,
+      'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
+    }
+  }
+  return await axios.request(options)
     .then((response) => {
       return response.data
     })
