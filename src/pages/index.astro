@@ -6,5 +6,5 @@ import { getWeathers } from '../services/weather.service'
 const weatherapi = await getWeathers('la romana')
 ---
 <Layout title="Weather" description="Current world weather">
-  <Home paramlocation={weatherapi} client:load />
+  <Home defaulWeather={weatherapi} client:load />
 </Layout>

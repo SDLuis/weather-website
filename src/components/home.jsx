@@ -2,8 +2,8 @@ import UseWeather from '../hooks/useWeather'
 import PanelComponent from './panel'
 import WeatherComponent from './weather'
 
-export default function Home ({ paramlocation }) {
-  const { weather, weatherCondition, time, timeOfDay, btnColor, dateFormated, setLocation } = UseWeather({ location: paramlocation })
+export default function Home ({ defaulWeather }) {
+  const { weather, weatherCondition, time, timeOfDay, btnColor, dateFormated, setLocation } = UseWeather({ defaultCountryWeather: defaulWeather })
   const css =
   `@media (max-width: 767px) {.backimage { background-image: none }}   
    @media (min-width: 768px) {.backimage { background-image: url(img/${timeOfDay}/${weatherCondition}blur.webp) }}`

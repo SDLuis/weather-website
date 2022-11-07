@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react'
 import { getWeathers } from '../services/weather.service'
 
-export default function UseWeather ({ location }) {
-  const [weather, setWeather] = useState(location)
-  const [Location, setLocation] = useState(weather.location.name)
+export default function UseWeather ({ defaultCountryWeather }) {
+  const [weather, setWeather] = useState(defaultCountryWeather)
+  const [Location, setLocation] = useState()
 
   useEffect(() => {
-    getWeathers(Location).then((response) => {
+    Location && getWeathers(Location).then((response) => {
       setWeather(response)
     })
   }, [Location])
@@ -31,7 +31,23 @@ export default function UseWeather ({ location }) {
       'Friday',
       'Saturday'
     ]
-    return weekday[new Date(`${year}-${month}-${day}`).getUTCDay()]
+    const monthOfYear = [
+      '',
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'September',
+      'October',
+      'November',
+      'December'
+    ]
+    const realMonth = monthOfYear[month]
+    return weekday[new Date(`${realMonth} ${day}, ${year}`).getUTCDay()]
   }
 
   const code = weather.current.condition.code
